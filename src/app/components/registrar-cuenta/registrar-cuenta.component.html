@@ -1,0 +1,111 @@
+<br><br>
+<div class="center">
+  <div class="displayTableCell">
+    <div class="authBlock">
+      <br><br>
+      <h3>Crear cuenta</h3>
+      <br><br>
+      <div class="formGroup">
+        <input
+          type="email"
+          class="formControl"
+          placeholder="Email Address"
+          #userEmail
+          required
+        />
+      </div>
+      <br><br>
+      <div class="formGroup">
+        <input
+          type="password"
+          class="formControl"
+          placeholder="Password"
+          #userPwd
+          required
+        />
+      </div>
+      <br><br>
+      <div class="formGroup">
+        <input
+          type="text"
+          class="formControl"
+          placeholder="Nombre"
+          #userName
+          required
+        />
+      </div>
+      <br><br>
+      <div class="formGroup">
+        <input
+          type="text"
+          class="formControl"
+          placeholder="País de interés 1"
+          #userFirstCountry
+          required
+        />
+      </div>
+      <br><br>
+      <div class="formGroup">
+        <input
+          type="text"
+          class="formControl"
+          placeholder="País de interés 2"
+          #userSecondCountry
+        />
+      </div>
+      <br><br>
+      <div class="formGroup">
+        <input
+          type="text"
+          class="formControl"
+          placeholder="País de interés 3"
+          #userThirdCountry
+        />
+      </div>
+      <br><br>
+      <div class="formGroup">
+        <input
+          type="text"
+          class="formControl"
+          placeholder="Phone Number"
+          #userNumber
+        />
+      </div>
+      <br><br>
+      <div class="formGroup">
+        <input
+          type="text"
+          class="formControl"
+          placeholder="Breve descripción"
+          #userDescription
+        />
+      </div>
+      <br><br>
+      <input type="file" class="text-nowrap text-truncate"
+             (change)="selectFile($event)" required/>
+      <br><br>
+      ¿Subirás casas?
+      <input type="text" #userType
+             placeholder="Por defecto, no">
+      <br><br>
+      <div class="formGroup">
+        <input
+          type="button"
+          class="btn btnPrimary"
+          value="Sign Up"
+          (click)="authService.SignUp(userEmail.value, userPwd.value)"
+          (click)="upload(userEmail.value, userName.value, userDescription.value, userNumber.value, userFirstCountry.value, userSecondCountry.value, userThirdCountry.value, userType.value)"
+          routerLink="/verify"
+        />
+      </div>
+    </div>
+    <br><br>
+    <div class="redirectToLogin">
+      <span
+      >Si ya tienes una cuenta
+        <span class="redirect" routerLink="/login">Inicie sesión</span></span
+      >
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

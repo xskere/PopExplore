@@ -1,0 +1,26 @@
+footer{
+  background: #525252;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  clear: both;
+  content:"";
+  display: table;
+  position:fixed;
+}
+nav{
+  float: left;
+}
+
+nav ul li {
+  list-style: none;
+  margin-left: 5px;
+  padding: 25px 0;
+  float: left;
+}
+
+@media screen and (max-width: 40em ) {
+  footer {
+    visibility: hidden;
+  }
+}

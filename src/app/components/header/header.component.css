@@ -1,0 +1,184 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+  background: grey;
+  font-family: "calibri";
+}
+
+header{
+  background: #525252;
+  top: 0;
+  right: 0;
+  width: 100%;
+  clear: both;
+  content:"";
+  display: table;
+}
+
+.menu{
+  width: 900px;
+  margin: 0 auto;
+}
+
+.logo{
+  width: 70px;
+  float: left;
+  padding: 8px;
+  margin-top: 10px;
+}
+
+.fotoPerfil{
+  width: 50px;
+  height: 50px;
+  clear:  both;
+  float: right;
+  border-radius: 50%;
+}
+
+nav{
+  float: left;
+}
+
+nav ul li {
+  list-style: none;
+  margin-left: 5px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.otrosItems{
+  padding-top: 25px;
+}
+.iniciarSesion{
+  padding-left: 250px;
+  padding-top: 25px;
+}
+
+nav ul li a::before {
+  display: block;
+  content:"";
+  width: 0%;
+  background-color: #3c3c3c;
+  height: 5px;
+  top: 0;
+  position: relative;
+  transition: width 0.5s;
+}
+
+nav ul li a:hover::before {
+  width: 100%;
+}
+
+.welcome{
+  position:relative;
+  width:auto;
+  height: 900px;
+  background-image: url(/src/assets/images/grancanaria.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+video{
+  width: 100%;
+  z-index: -1;
+}
+
+video::-webkit-media-controls{
+  display: none;
+}
+
+.present{
+  position:relative;
+  display: flex;
+  align-items: center;
+  font-family: AvertaBold;
+  color:white;
+  text-align: center;
+  font-size: 90px;
+  padding-top: 0px;
+  text-shadow: 2px 2px 5px black;
+  z-index: 1;
+}
+
+.prestex{
+  position: absolute;
+  text-align: center;
+  font-family: AvertaBold;
+  color:red;
+  text-align: right;
+  font-size: 70px;
+  text-shadow: 2px 2px 5px black;
+  z-index: 1;
+}
+
+.country1{
+  position:relative;
+  width:auto;
+  height: 700px;
+  background-image: url(/src/assets/images/italy.png);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+.country2{
+  position: relative;
+  width:auto;
+  height: 700px;
+  background-image: url(/src/assets/images/mongolia.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+.country3{
+  position: relative;
+  width:auto;
+  height: 700px;
+  background-image: url(/src/assets/images/grancanaria.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+.tit1{
+  font-family: AvertaBold;
+  color:white;
+  text-align: right;
+  font-size: 70px;
+  padding-top: 130px;
+  padding-right: 180px;
+  text-shadow: 2px 2px 5px black;
+}
+
+.subtitulocountry1{
+  color: white;
+  font-family: Averta;
+  font-size: 30px;
+  padding-right: 170px;
+  padding-top: 0px;
+  text-align: right;
+  text-shadow: 2px 2px 5px black;
+}
+
+
+@media screen and (max-width: 40em ) {
+
+  .iniciarSesion {
+    padding-left: 0px;
+    clear:both;
+  }
+  .fotoPerfil{
+    margin-right: 0px;
+
+  }
+
+
+
+}

@@ -1,0 +1,12 @@
+<div class="page">
+  <div class="clase1" style="background-image: url({{photo}});">
+    <h1>{{selectedCountry}}</h1>
+  </div>
+</div>
+
+<div *ngFor="let casa of houses; let i = index" class="house" style="background-image: url({{casa.url}});">
+  <h1 class="tit1"><a routerLink="/reservarCasa" (click)="onClick(casa.key)" style="color:white;">{{casa.localizacion}}</a></h1>
+</div>
+
+
+<app-footer></app-footer>

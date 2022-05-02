@@ -1,0 +1,25 @@
+<br><br>
+<div class="center">
+  <div class="displayTableCell">
+    <div class="authBlock">
+      <br><br>
+      <h3>Cambiar contraseña</h3>
+      <br><br>
+      <p class="text-center">Introduzca su email para requerir un cambio de contraseña.</p>
+      <br><br>
+      <div class="formGroup">
+        <input type="email" class="formControl" placeholder="email" #passwordResetEmail required>
+      </div>
+      <br><br>
+      <!-- Calling ForgotPassword from AuthService Api -->
+      <div class="formGroup">
+        <input type="submit" class="btn btnPrimary" value="Resetear contraseña" (click)="authService.ForgotPassword(passwordResetEmail.value)">
+      </div>
+    </div>
+    <br><br>
+    <div class="redirectToLogin">
+      <span class="redirect" routerLink="/login">Volver a inicio de sesión</span>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

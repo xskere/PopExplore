@@ -1,0 +1,27 @@
+ <body *ngFor="let user of fileUploads">
+    <div *ngIf="userLogged.email === user.email">
+      <img src="{{user.photoUrl}}" class="phoper" >
+    </div>
+    <div *ngIf="userLogged.email === user.email">
+      <h1 class="atras"><a href="#" class="atra">Atrás</a></h1>
+    </div>
+    <div *ngIf="userLogged.email === user.email">
+      <h1 class="name">{{user.name}}</h1>
+      <h1 class="rolname">{{user.userType}}</h1>
+    </div>
+    <hr *ngIf="userLogged.email === user.email">
+    <article *ngIf="userLogged.email === user.email">
+      <h1 class="moreInfo">Países que me gustan</h1>
+      <p class="countries2">{{user.country1}}</p>
+      <p class="countries2">{{user.country2}}</p>
+      <p class="countries2">{{user.country3}}</p>
+      <h1 class="moreInfo">Datos personales</h1>
+      <p class="countries2">Teléfono de contacto: {{user.number}}</p>
+    </article>
+    <hr *ngIf="userLogged.email === user.email">
+    <div *ngIf="userLogged.email === user.email">
+      <h1 class="acer">Acerca de mí</h1>
+      <textarea readonly class="box">{{user.description}}</textarea>
+    </div>
+   <p *ngIf="userLogged.email === user.email">&nbsp;</p><p *ngIf="userLogged.email === user.email"></p><p *ngIf="userLogged.email === user.email">&nbsp;</p><p *ngIf="userLogged.email === user.email">&nbsp;</p>
+ </body>

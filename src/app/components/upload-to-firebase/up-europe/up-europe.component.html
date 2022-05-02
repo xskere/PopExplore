@@ -1,0 +1,13 @@
+<body>
+
+<h1 style="text-align: center">Seleccione en que país subirá la casa</h1>
+<br><br>
+<section id="col1" *ngFor="let country of countriesEurope">
+  <img style="width: 300px; height: 250px;" src="{{country.imagenSegunda}}" (click)="selectCountry(country.key)">
+</section>
+
+
+<app-upload-form [selectedCountry]='selectedCountry' [selectedContinent]="continent"></app-upload-form>
+
+
+</body>

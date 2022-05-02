@@ -1,0 +1,51 @@
+<body>
+  <div class="wrapper">
+    <section id="col1">
+      <div *ngFor="let paises of countriesEurope; let i = index">
+        <h2 *ngIf="i == 0">Europa</h2>
+        <h3>{{paises.key}}</h3>
+        <a routerLink="/pais" (click)="onSelect('Europa', paises.key, paises.imagenPortada)"><img src="{{paises.imagenPortada}}" width="300px" height="150px"></a>
+        <p>{{paises.detalles}}</p>
+      </div>
+    </section>
+
+    <section id="col2">
+      <div *ngFor="let paises of countriesAsia; let i = index">
+        <h2 *ngIf="i == 0">Asia</h2>
+        <h3>{{paises.key}}</h3>
+        <a routerLink="/pais" (click)="onSelect('Asia', paises.key, paises.imagenPortada)"><img src="{{paises.imagenPortada}}" width="300px" height="150px"></a>
+        <p>{{paises.detalles}}</p>
+      </div>
+    </section>
+
+    <section id="col3">
+      <div *ngFor="let paises of countriesAfrica; let i = index">
+        <h2 *ngIf="i == 0">África</h2>
+        <h3>{{paises.key}}</h3>
+        <a routerLink="/pais" (click)="onSelect('África', paises.key, paises.imagenPortada)"><img src="{{paises.imagenPortada}}" width="300px" height="150px"></a>
+        <p>{{paises.detalles}}</p>
+      </div>
+    </section>
+
+    <section id="col4">
+      <div *ngFor="let paises of countriesOceania; let i = index">
+        <h2 *ngIf="i == 0">Oceanía</h2>
+        <h3>{{paises.key}}</h3>
+        <a routerLink="/pais" (click)="onSelect('Oceanía', paises.key, paises.imagenPortada)"><img src="{{paises.imagenPortada}}" width="300px" height="150px"></a>
+        <p>{{paises.detalles}}</p>
+      </div>
+    </section>
+
+    <section id="col5">
+      <div *ngFor="let paises of countriesAmerica; let i = index">
+        <h2 *ngIf="i == 0">América</h2>
+        <h3>{{paises.key}}</h3>
+        <a routerLink="/pais" (click)="onSelect('América', paises.key, paises.imagenPortada)"><img src="{{paises.imagenPortada}}" width="300px" height="150px"></a>
+        <p>{{paises.detalles}}</p>
+      </div>
+    </section>
+
+  </div>
+</body>
+
+<app-footer></app-footer>

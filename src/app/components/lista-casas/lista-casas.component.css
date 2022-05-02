@@ -1,0 +1,155 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: grey;
+  font-family: "calibri";
+}
+
+footer{
+  background: #525252;
+  padding: center;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  clear: both;
+  content:"";
+  display: table;
+}
+
+header{
+  background: #525252;
+  padding: center;
+  top: 0;
+  right: 0;
+  width: 100%;
+  clear: both;
+  content:"";
+  display: table;
+
+}
+.clase1{
+  color: white;
+  padding: 70px;
+  position: relative;
+  width: auto;
+  height: 700px;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  text-align: right;
+  font-size: 40px;
+  padding-top: 130px;
+  padding-right: 180px;
+  text-shadow: 2px 2px 5px black;
+}
+.menu{
+  width: 900px;
+  margin: 0 auto;
+}
+
+.logo{
+  width: 70px;
+  float: left;
+  padding: 8px;
+}
+
+nav{
+  float: left;
+}
+
+nav ul li {
+  list-style: none;
+  margin-left: 5px;
+  padding: 25px 0;
+  float: left;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav ul li a::before {
+  display: block;
+  content:"";
+  width: 0%;
+  background-color: #3c3c3c;
+  height: 5px;
+  top: 0;
+  position: relative;
+  transition: width 0.5s;
+}
+
+nav ul li a:hover::before {
+  width: 100%;
+}
+
+.welcome{
+  position:relative;
+  width:auto;
+  height: 900px;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+video{
+  width: 100%;
+  z-index: -1;
+}
+
+video::-webkit-media-controls{
+  display: none;
+}
+
+.present{
+  position:relative;
+  display: flex;
+  align-items: center;
+  color:white;
+  text-align: center;
+  font-size: 90px;
+  padding-top: 0px;
+  text-shadow: 2px 2px 5px black;
+}
+
+.prestex{
+  position: absolute;
+  text-align: center;
+  color:red;
+  text-align: right;
+  font-size: 70px;
+  text-shadow: 2px 2px 5px black;
+}
+
+.house{
+  position:relative;
+  width:auto;
+  height: 700px;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.tit1{
+  color:white;
+  text-align: right;
+  font-size: 70px;
+  padding-top: 130px;
+  padding-right: 180px;
+  text-shadow: 2px 2px 5px black;
+}
+
+.subtitulopiso1{
+  color: white;
+  font-size: 30px;
+  padding-right: 170px;
+  padding-top: 0px;
+  text-align: right;
+  text-shadow: 2px 2px 5px black;
+}
+

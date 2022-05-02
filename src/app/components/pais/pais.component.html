@@ -1,0 +1,32 @@
+<body *ngFor="let country of countries; ">
+  <section *ngIf="country.key === selectedCountry">
+    <div class="clase1" style="background-image: url({{country.imagenPortada}});">
+      <h1>{{country.key}}</h1>
+      <h6><a routerLink="/listaCasas" style="color: white;">Ver casas disponibles</a></h6>
+    </div>
+    <div class="clase2">
+      <div>
+        <img id="image" src="{{country.imagenSegunda}}"/>
+      </div>
+      <div id="descripcion">
+        <h2 class="subtitulo">Historia</h2>
+        <br><br>
+        <p>{{country.descripcionUno}}</p>
+      </div>
+    </div>
+    <div class="imagen_gastronomia" style="background-image: url({{country.imagenPortada}});">
+      <h1>Gastronomía de {{selectedCountry}}</h1>
+    </div>
+    <div class="clase3">
+      <div>
+        <img id="image2" src="{{country.imagenComida}}"/>
+      </div>
+      <div id="descripcion2">
+        <h2 class="subtitulo2">Gastronomía</h2>
+        <br><br>
+        <p>{{country.descripcionDos}}</p>
+      </div>
+    </div>
+    <app-footer></app-footer>
+  </section>
+</body>

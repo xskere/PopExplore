@@ -1,0 +1,36 @@
+<body *ngFor="let house of houses">
+  <section *ngIf="house.key === this.selectedHouse">
+    <div class="clase1" style="background-image: url({{this.photo}});">
+      <h1>{{house.localizacion}}</h1>
+    </div>
+
+    <div class="clase2">
+
+      <div>
+
+        <img id="image" style="width:600px; height:450px;" src="{{house.url}}"/>
+
+      </div>
+
+      <div id="descripcion">
+
+        <h2 class="subtitulo">Ha reservado con éxito el piso</h2>
+        <br><br>
+
+        <p>
+
+          Este piso se encuentra en {{house.localizacion}}
+
+          <br><br>
+
+          Dispone de {{house.numHabitaciones}}
+
+        </p>
+
+      </div>
+
+    </div>
+
+    <app-footer></app-footer>
+  </section>
+</body>

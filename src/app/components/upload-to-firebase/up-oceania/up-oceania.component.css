@@ -1,0 +1,156 @@
+/* main.css */
+
+/* 1 em = 16 px */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('https://i.pinimg.com/originals/b8/4f/41/b84f4195a6d33c93d01111287c0c7b7e.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+}
+
+div.wrapper {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+
+nav{
+  float: left;
+}
+
+nav ul li {
+  list-style: none;
+  margin-left: 5px;
+  padding: 25px 0;
+  float: left;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav ul li a::before {
+  display: block;
+  content:"";
+  width: 0%;
+  background-color: #3c3c3c;
+  height: 5px;
+  top: 0;
+  position: relative;
+  transition: width 0.5s;
+}
+
+nav ul li a:hover::before {
+  width: 100%;
+  display: block;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+  border-right: 1px solid #bababa;
+}
+
+img {
+  max-width: 100% ;
+}
+
+
+#col1 {
+  margin-left: 20px;
+  float: left;
+  width: 30%;
+  /*margin-top: 4%;*/
+  /*margin: 1em 1em 1em 2em;*/
+}
+
+#col2 {
+
+  float: left;
+  width: 16%;
+  margin-left: 4%;
+  /*margin: 1em 2em 0 0;*/
+}
+
+#col3 {
+  margin-left: 4%;
+  float: left;
+  width: 16%;
+  /*margin-top: 1em;*/
+}
+
+#col4 {
+  float: left;
+  width: 16%;
+  margin-left: 4%;
+  /*margin-top: 4%;*/
+  /*margin: 1em 1em 1em 2em;*/
+}
+
+#col5 {
+
+  float: left;
+  width: 16%;
+  margin-left: 4%;
+  /*margin: 1em 2em 0 0;*/
+}
+
+
+
+
+@media screen and (max-width: 40em ) {
+  footer {
+    visibility: hidden;
+  }
+
+  nav ul li {
+    width: 36%
+  }
+  #col1 {
+    /*margin-left: 20px;*/
+    clear: both;
+    float: none;
+    width: 50%;
+    margin-left: 0;
+  }
+
+  #col2 {
+    /*margin-left: 20px;*/
+    clear: both;
+    float: none;
+    width: 50%;
+    margin-left: 0;
+  }
+
+  #col3 {
+    /*margin-left: 20px;*/
+    clear: both;
+    float: none;
+    width: 50%;
+    margin-left: 0;
+  }
+
+  #col4 {
+    /*margin-left: 20px;*/
+    clear: both;
+    float: none;
+    width: 50%;
+    margin-left: 0;
+  }
+
+  #col5 {
+    /*margin-left: 20px;*/
+    clear: both;
+    float: none;
+    width: 50%;
+    margin-left: 0;
+  }
+
+}

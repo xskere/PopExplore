@@ -1,0 +1,223 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+header{
+  position: fixed;
+  background: #525252;
+  padding: center;
+  top: 0;
+  right: 0;
+  width: 100%;
+  clear: both;
+  content:"";
+  display: table;
+
+}
+
+.fotoPerfil{
+  width: 50px;
+  height: 50px;
+}
+
+.menu{
+  width: 900px;
+  margin: 0 auto;
+}
+
+.logo{
+  width: 70px;
+  float: left;
+  padding-left: 8px;
+  margin-top: 10px;
+}
+
+
+nav ul li {
+  list-style: none;
+  margin-left: 5px;
+  padding: 25px 0;
+  float: left;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav ul li a::before {
+  display: block;
+  content:"";
+  width: 0%;
+  background-color: #3c3c3c;
+  height: 5px;
+  top: 0;
+  position: relative;
+  transition: width 0.5s;
+}
+
+nav ul li a:hover::before {
+  width: 100%;
+}
+
+.phoper{
+  width: 200px;
+  height: 200px;
+  float: left;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size:cover;
+  margin-top: 100px;
+  margin-left: 20px;
+  box-shadow: 2px 2px 5px #000000;
+
+}
+
+.atras{
+  font-size: 20px;
+  margin-left: 1400px;
+  margin-top: 50px;
+}
+
+.atra{
+  color: white;
+  text-shadow: 2px 2px 5px black;
+}
+
+.name{
+  color: white;
+  font-size: 50px;
+  text-shadow: 2px 2px 5px black;
+  margin-left: 300px;
+  margin-top: 130px;
+}
+
+.rolname{
+  color: white;
+  font-size: 30px;
+  text-shadow: 2px 2px 5px black;
+  margin-left: 300px;
+}
+
+hr {width: 80%;height: 8px;margin-left: auto;margin-right: auto;background-color:#666;border: 0 none;margin-top: 100px;margin-bottom:100px;}
+
+
+.moreInfo{
+  color: white;
+  font-size: 70px;
+  text-shadow: 2px 2px 5px black;
+  margin-left: 300px;
+  margin-top: 50px;
+}
+
+.countries2{
+  color: white;
+  font-size: 40px;
+  text-shadow: 2px 2px 5px black;
+  margin-left: 300px;
+  margin-top: 50px;
+}
+
+.acer{
+  color: white;
+  font-size: 30px;
+  text-shadow: 2px 2px 5px black;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.edit{
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  text-shadow: 2px 2px 5px black;
+  float: right;
+  margin-top: 20px;
+  margin-right: 50px;
+}
+
+form{
+  display: block;
+
+}
+.box{
+  background-color: #3c3c3c;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+  height: 200px;
+  box-shadow: 1px 1px 10px rgb(255, 0, 0);
+  resize: none;
+}
+
+.footer{
+  position:relative;
+  bottom:0;
+  width:100%;
+  height:60px;   /* Height of the footer */
+  background:#525252;
+}
+
+
+@media screen and (max-width: 40em ) {
+  .phoper{
+    clear:both;
+    float:none;
+    padding: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  .atras{
+    padding: 0px;
+    clear:both;
+    float:none;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  .name{
+    padding: 0px;
+    clear:both;
+    float:none;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  .rolname{
+    padding: 0px;
+    clear:both;
+    float:none;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  .moreInfo{
+    padding: 0px;
+    clear:both;
+    float:none;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  .countries2{
+    padding: 0px;
+    clear:both;
+    float:none;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  .countries2{
+    padding: 0px;
+    clear:both;
+    float:none;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+}
