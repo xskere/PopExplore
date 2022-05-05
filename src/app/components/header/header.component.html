@@ -1,14 +1,14 @@
 
-  <header *ngFor="let user of fileUploads; let i = index">
-    <div class="menu" *ngIf="i==0">
+  <header *ngFor="let user of fileUploads; let i = index; let ultimo = last;">
+    <div class="menu" *ngIf="(!authService.isLoggedIn && i===0) || (user.email === userLogged.email)">
       <a routerLink="/home"><img src="https://firebasestorage.googleapis.com/v0/b/popexplore-99fb9.appspot.com/o/images%2FLogo.png?alt=media&token=bb81b284-22a3-447e-918c-1a50355c54bd" class="logo"></a>
         <nav>
           <ul>
-            <li style="margin-top: 10px; float:left;"class="otrosItems"><a routerLink="/listaPaises">Explora el mundo      </a></li>
-            <li style="margin-top: 10px; float:left;"class="otrosItems"><a routerLink="/perfilUsuario" *ngIf="authService.isLoggedIn">|  Mi perfil                      </a></li>
-            <li style="margin-top: 10px;float:left;" class="otrosItems"><a routerLink="/upload" *ngIf="authService.isLoggedIn && user.userType === 'Anfitrión' && userLogged.email === user.email">|  SubirCasa</a></li>
-            <li style="margin-top: 10px;float:left;" class="iniciarSesion" *ngIf="!authService.isLoggedIn"><a routerLink="/login">Iniciar sesión</a></li>
-            <li style="margin-top: 10px;float:left;"class="iniciarSesion" *ngIf="authService.isLoggedIn && i == 0"><a routerLink="/home"><span (click)="authService.SignOut()">Cerrar Sesión</span></a></li>
+            <li style="margin-top: 10px; float:left;"class="otrosItems" *ngIf="(!authService.isLoggedIn && i===0) || (user.email === userLogged.email)"><a routerLink="/listaPaises">Explora el mundo      </a></li>
+            <li style="margin-top: 10px; float:left;"class="otrosItems" *ngIf="authService.isLoggedIn && user.email === userLogged.email"><a routerLink="/perfilUsuario">|  Mi perfil                      </a></li>
+            <li style="margin-top: 10px;float:left;" class="otrosItems" *ngIf="authService.isLoggedIn && user.userType === 'Anfitrión' && user.email === userLogged.email"><a (click)="output(user.email)"  >|  SubirCasa</a></li>
+            <li style="margin-top: 10px;float:left;" class="iniciarSesion" *ngIf="!authService.isLoggedIn "><a routerLink="/login">Iniciar sesión</a></li>
+            <li style="margin-top: 10px;float:left;"class="iniciarSesion" *ngIf="authService.isLoggedIn && user.email === userLogged.email"><a routerLink="/home"><span (click)="authService.SignOut()">Cerrar Sesión</span></a></li>
           </ul>
         </nav>
     </div>
