@@ -26,4 +26,13 @@ export class HeaderComponent implements OnInit {
     this.userLogged = JSON.parse(localStorage.getItem('user')!);
   }
 
+  output(userEmail: string){
+    console.log("User logged is: " + this.userLogged.email + " and user is: " + userEmail);
+  }
+
+  headerAppear(userEmail: string, index: number){
+    return (!this.authService.isLoggedIn && index===0) || (userEmail === this.userLogged.email);
+
+  }
+
 }

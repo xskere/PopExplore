@@ -64,9 +64,9 @@ export class ListaPaisesComponent implements OnInit {
   }
 
   onSelect(continentSelected:string,countrySelected:string, photo:string){
-    globalThis.selectedCountry = countrySelected;
-    globalThis.selectedContinent = continentSelected;
-    globalThis.photo = photo;
+    window.sessionStorage.setItem("selectedCountry", countrySelected);
+    window.sessionStorage.setItem("selectedContinent", continentSelected);
+    window.sessionStorage.setItem("photo", photo);
   }
 
 }

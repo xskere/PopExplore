@@ -28,10 +28,3 @@ export class FileUploadUsers {
   }
 
 }
-
-declare global{
-  var selectedCountry: string;
-  var selectedContinent: string;
-  var photo: string;
-  var selectedHouse: string;
-}

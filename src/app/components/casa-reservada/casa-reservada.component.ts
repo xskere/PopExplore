@@ -21,10 +21,10 @@ export class CasaReservadaComponent implements OnInit {
   constructor(private uploadService: FileUploadService) { }
 
   ngOnInit(): void {
-    this.selectedContinent = globalThis.selectedContinent;
-    this.selectedCountry = globalThis.selectedCountry;
-    this.photo = globalThis.photo;
-    this.selectedHouse = globalThis.selectedHouse;
+    this.selectedContinent = window.sessionStorage.getItem("selectedContinent");
+    this.selectedCountry = window.sessionStorage.getItem("selectedCountry");
+    this.photo = window.sessionStorage.getItem("photo");
+    this.selectedHouse = window.sessionStorage.getItem("selectedHouse");
 
     this.uploadService.getFiles("/continentes/"+this.selectedContinent+"/listaPaises/" +this.selectedCountry+"/listaCasas/",10).snapshotChanges().pipe(
       map(changes => // store key

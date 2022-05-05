@@ -21,10 +21,10 @@ export class PaisComponent implements OnInit {
   constructor(private uploadService: FileUploadService) { }
 
   ngOnInit(): void {
-    this.selectedContinent = globalThis.selectedContinent;
-    this.selectedCountry = globalThis.selectedCountry;
+    this.selectedContinent = window.sessionStorage.getItem("selectedContinent");
+    this.selectedCountry = window.sessionStorage.getItem("selectedCountry");
 
-    this.uploadService.getFiles("/continentes/"+globalThis.selectedContinent+"/listaPaises",10).snapshotChanges().pipe(
+    this.uploadService.getFiles("/continentes/"+this.selectedContinent+"/listaPaises",10).snapshotChanges().pipe(
       map(changes => // store key
         changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
       )

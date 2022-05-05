@@ -22,9 +22,9 @@ export class ListaCasasComponent implements OnInit {
   constructor(private uploadService: FileUploadService) { }
 
   ngOnInit(): void {
-    this.selectedContinent = globalThis.selectedContinent;
-    this.selectedCountry = globalThis.selectedCountry;
-    this.photo = globalThis.photo;
+    this.selectedContinent = window.sessionStorage.getItem("selectedContinent");
+    this.selectedCountry = window.sessionStorage.getItem("selectedCountry");
+    this.photo = window.sessionStorage.getItem("photo");
 
     this.uploadService.getFiles("/continentes/"+this.selectedContinent+"/listaPaises/" +this.selectedCountry+"/listaCasas",10).snapshotChanges().pipe(
       map(changes => // store key
@@ -36,7 +36,7 @@ export class ListaCasasComponent implements OnInit {
   }
 
   onClick(key:string){
-    globalThis.selectedHouse = key;
+    window.sessionStorage.setItem("selectedHouse", key);
   }
 
 }

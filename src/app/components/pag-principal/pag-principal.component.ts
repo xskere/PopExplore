@@ -14,8 +14,8 @@ export class PagPrincipalComponent implements OnInit {
   }
 
   onClick(continentSelected:string,countrySelected:string, photo:string){
-    globalThis.selectedCountry = countrySelected;
-    globalThis.selectedContinent = continentSelected;
-    globalThis.photo = photo;
+    window.sessionStorage.setItem("selectedContinent", continentSelected);
+    window.sessionStorage.setItem("selectedCountry", countrySelected);
+    window.sessionStorage.setItem("photo", photo);
   }
 }
