@@ -6,7 +6,7 @@
           <ul>
             <li style="margin-top: 10px; float:left;"class="otrosItems" *ngIf="(!authService.isLoggedIn && i===0) || (user.email === userLogged.email)"><a routerLink="/listaPaises">Explora el mundo      </a></li>
             <li style="margin-top: 10px; float:left;"class="otrosItems" *ngIf="authService.isLoggedIn && user.email === userLogged.email"><a routerLink="/perfilUsuario">|  Mi perfil                      </a></li>
-            <li style="margin-top: 10px;float:left;" class="otrosItems" *ngIf="authService.isLoggedIn && user.userType === 'Anfitrión' && user.email === userLogged.email"><a (click)="output(user.email)"  >|  SubirCasa</a></li>
+            <li style="margin-top: 10px;float:left;" class="otrosItems" *ngIf="authService.isLoggedIn && user.userType === 'Anfitrión' && user.email === userLogged.email"><a routerLink="/upload">|  SubirCasa</a></li>
             <li style="margin-top: 10px;float:left;" class="iniciarSesion" *ngIf="!authService.isLoggedIn "><a routerLink="/login">Iniciar sesión</a></li>
             <li style="margin-top: 10px;float:left;"class="iniciarSesion" *ngIf="authService.isLoggedIn && user.email === userLogged.email"><a routerLink="/home"><span (click)="authService.SignOut()">Cerrar Sesión</span></a></li>
           </ul>
